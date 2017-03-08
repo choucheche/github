@@ -1,0 +1,34 @@
+cmd 到指定目录
+
+git init
+//初始化当前目录为 git 仓库
+//当前目录新增.git文件集，需要在atom里才能看到目录里有git文件生成
+
+在 git bash 里输入 ssh 查看是否安装了ssh
+
+在 git bash 里输入
+ssh-keygen -t rsa
+接着连续三个回车键（不需要输入密码）就会生成两个文件 id_rsa 和 id_rsa.pub ，
+id_rsa 是密钥，id_rsa.pub 是公钥。这两个文件默认分别在如下目录里生成：
+
+Linux/Mac 系统 在 **~/.ssh** 下，
+win系统在 **/c/Documents and Settings/username/.ssh** 下
+
+在目录这个位置生成了文件(ymhj是系统用户名)
+C:\Users\ymhj\.ssh
+
+复制id_rsa.pub里的内容，
+打开github的settings 里的 SSH and GPG keys 里的 New SSH key 按钮
+将id_rsa.pub里的内容粘贴进去
+点击 Add SSH key 按钮就ok了
+
+添加进去后，在git bash 里输入 ssh -T git@github.com 确认是否生成
+出现提示
+The authenticity of host 'github.com (192.30.253.112)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no)? yes
+问你确认是否连接 选yes
+出现提示
+Warning: Permanently added 'github.com,192.30.253.112' (RSA) to the list of known hosts.
+Hi choucheche! You've successfully authenticated, but GitHub does not provide shell access.
+提示，账户已经加入github

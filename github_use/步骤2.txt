@@ -1,0 +1,25 @@
+cmd 到指定目录
+
+将代码提交到git项目中
+1.在github上新建个项目
+2.在本地指定目录制作git初始化
+cmd 在指定目录，输入git init，让当前目录git初始化
+3.进行本地指定目录和git项目地址关联
+cmd 在指定目录，输入
+git remote add origin git@github.com:choucheche/gulp_install.git
+注：这个地址需要在git项目里，找到项目地址，切换到ssh的，不是https的，注意切换
+
+设置上传文件的用户，他的用户名和邮箱地址
+git config --global user.name "choucheche"
+git config --global user.email "snow100401176@126.com"
+注：
+以上进行了全局配置，如果某一个项目想要使用特定的邮箱，那么只需切换到相应的项目，
+将上述代码中的 **--global** 参数去除，再重新执行一遍就可以了。
+注：在 GitHub 上的每次提交理论上都会在主页的下方产生一条绿色小方块的记录，
+如果确认提交后，没有绿色方块显示，那一定是所提交代码配置的邮箱与当前 GitHub 上的邮箱不一致，GitHub 上的邮箱可以到 **Setting -> Emails**里查看。
+
+然后就可以提交代码了
+git add .
+git commit -m '123'
+git push origin master
+就可以把代码提交上去了
